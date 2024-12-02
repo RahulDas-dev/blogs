@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <title>Rahul Das - Data Scientist | Machine Learning, Data Science, Deep Learning</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="Description" CONTENT="">
+    <meta name="robots" content="index, follow"/>
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height,
+                                  initial-scale=1.0, user-scalable=no,
+                                  minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="title" content=Rahul Das - Data Scientist | Machine Learning, Data Science, Deep Learning/>
+    <meta name="keywords" content=Rahul Das, Data Scientist, Machine Learning, Data Science, Deep Learning, AI, Artificial Intelligence, Predictive Analytics, Statistical Modeling, Data Analysis, Python, Neural Networks, Natural Language Processing, Computer Vision, Data-driven Decision Making, 11 years experience, Portfolio, Data Mining, Feature Engineering, Model Deployment, Industry Expertise, Data Visualization, Problem Solving>
+    <link rel="shotcut icon" type="image/png" href="./favicon.ico" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content=Experienced Data Scientist with +12 years in the industry, specializing in Machine Learning, Data Science, and Deep Learning. Proven track record of delivering impactful solutions and driving business insights through advanced analytics. Explore my portfolio to see how I&#x27;ve applied my expertise to solve complex problems and contribute to the success of various projects and organizations./>
+    <meta property="og:image" content="https://rahuldas-dev.github.io/profile/logo256.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="256" />
+    <meta property="og:image:height" content="256" />
+    <meta name="theme-color" content="#576ce0"/>
+  <script type="module" crossorigin src="/blogs/assets/sgd-BCYagxdy.js"></script>
+  <link rel="modulepreload" crossorigin href="/blogs/assets/auto-render-DFiRW_5p.js">
+  <link rel="stylesheet" crossorigin href="/blogs/assets/auto-render-Bpznw4TJ.css">
+  <link rel="stylesheet" crossorigin href="/blogs/assets/ols-DfWdcR40.css">
+</head>
+<body>
+<!--==================== Header ====================-->  
+  <header id='header-top'>    
+    <nav >
+        <span class="nav__logo">Rahul 
+            <!--  <img src="assets/logo.png" alt="logo image" > -->
+        </span>
+        <button class="nav__btn" id="nav-btn">
+            <span>
+                <svg viewBox="0 -960 960 960" width="24" height="24" class="fill-neutral-800 dark:fill-neutral-200" id="nav-btn-menu-icon">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                </svg>
+                <svg viewBox="0 0 24 24" width="24" height="24" class="fill-neutral-800 dark:fill-neutral-200 hidden" id="nav-btn-cross-icon">
+                    <path d="M18,6h0a1,1,0,0,0-1.414,0L12,10.586,7.414,6A1,1,0,0,0,6,6H6A1,1,0,0,0,6,7.414L10.586,12,6,16.586A1,1,0,0,0,6,18H6a1,1,0,0,0,1.414,0L12,13.414,16.586,18A1,1,0,0,0,18,18h0a1,1,0,0,0,0-1.414L13.414,12,18,7.414A1,1,0,0,0,18,6Z"/>
+                </svg>
+            </span>
+            
+        </button>
+        <ul class="nav__menu hide-menu" id ="nav-menu">
+            <li class="nav__item">
+                <a href="#experience" class="nav__link"><i class="icon-experience  svg-icon nav__icon"></i>Experience</a>
+            </li>
+            <li class="nav__item">
+                <a href="#education" class="nav__link"><i class="icon-education svg-icon nav__icon"></i>Academic</a>
+            </li>
+            <li class="nav__item">
+                <a href="#project" class="nav__link"><i class="icon-projects svg-icon nav__icon"></i>Project</a>
+            </li>
+            <li class="nav__item">
+                <button class="nav__link" id="theme_btn">
+                    <i class="icon-sun svg-icon" id="theme_icon"></i>
+                    <span class="md:hidden">Toggle Display Mode</span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+</header>  <main class="main" id="blog_contain">
+    <section class="container ">
+  <h1 class="section__title">The General Problem Statement for Machine Learning</h1>
+  <div>
+    Assume we observe a dataset of examples $ {D= \{(x_k, y_k)\}_{k=1..n} }$ where ${x_k = (x_k^1, x_k^2, ..., x_k^m)}$
+    is a random vector of $m$ features ${x_k \in \mathbb{R}^m}$ and ${y_k \in \mathbb{R}}$ is a target. The examples
+    ${x_k, y_k}$ are independent and identically distributed according to some unknown distribution ${P(·, ·)}$. The
+    goal of a learning task is to train a function ${F : \mathbb{R}^m \to \mathbb{R}}$ which minimizes the expected loss
+    ${\mathcal{L}(F) := \mathbb{E}L(y, F(x))}$. Here $L(·, ·)$ is a smooth loss function and $(x,y)$ is a test example
+    sampled from $P$ independently of the training set $D$.
+
+    $$ {D= \{(x_k, y_k)\}_{k=1..n} \qquad x_k \in \mathbb{R}^m \qquad y_k \in \mathbb{R}} $$
+
+    $n \rightarrow $ Training dataset size $\\$
+    $m \rightarrow $ Number of features $\\$
+    $F \rightarrow $ The learning task is to find a function $F$ that minimizes the expected loss $\mathcal{L}(F)$ $\\$
+    $F(x) \rightarrow \hat{y} \rightarrow$ estimation for the sample $x$ $\\$
+    $L \rightarrow L(y, F(x)) \rightarrow L(y, \hat{y})$ The Loss Function $\\$
+  </div>
+
+  <h1 class="section__title">OLS (Ordinary Least Squares) regression</h1>
+  <div>
+    The $F$ is Linear function and the loss function is the squared error loss for OLS$\\$
+
+    $$F(x_k) = \beta_0 + \beta_1x_k^1 + \beta_2x_k^2 + ... + \beta_mx_k^m$$
+
+    $$F(x_k) = \begin{bmatrix} 1 & x_k^1 & x_k^2 & \cdots & x_k^m \end{bmatrix}
+    \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \\ \vdots \\ \beta_m \end{bmatrix}$$
+
+    $$F(x_k) = X_k\beta = \hat{y}_k$$
+
+    where:$\\$
+    $$X_k = \begin{bmatrix} 1 & x_k^1 & x_k^2 & \cdots & x_k^m \end{bmatrix}_{1 \times (m+1)} \quad
+    X_k \in \mathbb{R}^{m+1}
+    \qquad \text{and} \qquad
+    \beta = \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \\ \vdots \\ \beta_m
+    \end{bmatrix}_{(m+1) \times 1}
+    \quad\beta \in \mathbb{R}^{m+1}$$
+
+    $$\hat{y}_k = \text{The predicted value of} \quad y_k \quad \text{and} \quad\hat{y}_k \in \mathbb{R}$$
+
+    <!-- Previous content remains -->
+
+    For the entire dataset of n observations: $\\$
+
+    $$
+    \begin{bmatrix} \hat{y}_1 \\ \hat{y}_2 \\ \vdots \\ \hat{y}_n \end{bmatrix} =
+    \begin{bmatrix}
+    1 & x_1^1 & x_1^2 & \cdots & x_1^m \\
+    1 & x_2^1 & x_2^2 & \cdots & x_2^m \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    1 & x_n^1 & x_n^2 & \cdots & x_n^m
+    \end{bmatrix}
+    \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \\ \vdots \\ \beta_m \end{bmatrix}
+    $$
+
+    $$ \hat{Y} = X\beta \tag{1}$$
+
+    where: $\\$
+    $$\hat{Y} = \begin{bmatrix} \hat{y}_1 \\ \hat{y}_2 \\ \vdots \\ \hat{y}_n \end{bmatrix}_{n \times 1} \quad
+    \hat{Y} \in \mathbb{R}^{n \times 1} \qquad
+    X = \begin{bmatrix}
+    1 & x_1^1 & x_1^2 & \cdots & x_1^m \\
+    1 & x_2^1 & x_2^2 & \cdots & x_2^m \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    1 & x_n^1 & x_n^2 & \cdots & x_n^m
+    \end{bmatrix}_{n \times (m+1)} \quad X \in \mathbb{R}^{n \times (m+1)}$$
+
+    The squared error loss function is: $\\$
+
+    $$ L = \frac{1}{n}\sum_{k=1}^n (y_k - \hat{y}_k)^2 \quad \text{The term} \quad y_k - \hat{y}_k = e_{k} \quad
+    \text{is known as the residual}$$
+
+    $$ L = \frac{1}{n}\sum_{k=1}^n (e_k)^2 = \frac{1}{n} [(e_1)^2 +(e_2)^2
+    + (e_n)^2 + ... + (e_n)^2 ] = \frac{1}{n}\begin{bmatrix} e_1 & e_2 & \cdots & e_n \end{bmatrix}
+    \begin{bmatrix} e_1 \\ e_2 \\ \vdots \\ e_n \end{bmatrix} = \frac{1}{n}e^Te$$
+
+    $$ L = \frac{1}{n}e^Te = \frac{1}{n}(Y - \hat{Y})^T(Y - \hat{Y}) = \frac{1}{n}(Y^T - \hat{Y}^T)(Y - \hat{Y}) =
+    \frac{1}{n}(Y^TY - Y^T\hat{Y} - \hat{Y}^TY + \hat{Y}^T\hat{Y})$$
+
+    Substituting $\quad \hat{Y} = X\beta \quad$ from equation [1] $\\$
+    $$ L = \frac{1}{n}(Y^TY - Y^TX\beta - (X\beta)^TY + (X\beta)^T(X\beta)) $$
+
+    Note that $(X\beta)^T = \beta^TX^T$: $\\$
+    $$ L = \frac{1}{n}(Y^TY - Y^TX\beta - \beta^TX^TY + \beta^TX^TX\beta) $$
+
+    Since $Y^TX\beta$ is a scalar, $Y^TX\beta = (Y^TX\beta)^T = \beta^TX^TY$: $\\$
+    $$ L = \frac{1}{n}(Y^TY - 2Y^TX\beta + \beta^TX^TX\beta)$$
+
+    The Loss function $L$ can be expressed as a function of $Y$, $X$ and $\beta$: $\\$
+
+    $$ L(Y, X, \beta) = \frac{1}{n}(Y^TY - 2Y^TX\beta + \beta^TX^TX\beta) \tag{2}$$
+
+    where: $\\$
+    $Y \in \mathbb{R}^{n \times 1}$ is the vector of observed values $\\$
+    $X \in \mathbb{R}^{n \times (m+1)}$ is the design matrix $\\$
+    $\beta \in \mathbb{R}^{(m+1) \times 1}$ is the parameter vector $\\$
+
+    To find the minimum of $L$, we take $\frac{\partial L}{\partial \beta}$ and set it to zero: $\\$
+
+    $$ \frac{\partial L}{\partial \beta} = \frac{1}{n}(-2X^TY + 2X^TX\beta) = 0 \tag{3}$$
+
+    Solving for $\beta$: $\\$
+
+    $$ -2X^TY + 2X^TX\beta = 0 $$
+    $$ 2X^TX\beta = 2X^TY $$
+    $$ X^TX\beta = X^TY $$
+    $$ \beta = (X^TX)^{-1}X^TY \tag{4}$$
+
+    Wait Since $L: \mathbb{R}^{(m+1)} \to \mathbb{R}$ maps a vector to a scalar, we can use not use simply partial
+    differentiation ,we will use the gradient operator: $\\$
+
+    Starting from equation (2): $\\$
+
+    $$ L(Y, X, \beta) = \frac{1}{n}(Y^TY - 2Y^TX\beta + \beta^TX^TX\beta) $$
+
+    Taking the gradient with respect to $\beta$: $\\$
+
+    $$ \nabla_\beta L = \frac{1}{n}\nabla_\beta(Y^TY - 2Y^TX\beta + \beta^TX^TX\beta) $$
+
+    Using matrix calculus rules: $\\$
+    $$ \nabla_\beta(Y^TY) = 0 \quad \text{(constant term)} $$
+    $$ \nabla_\beta(-2Y^TX\beta) = -2X^TY $$
+    $$ \nabla_\beta(\beta^TX^TX\beta) = 2X^TX\beta $$
+
+    Therefore: $\\$
+    $$ \nabla_\beta L = \frac{1}{n}(0 - 2X^TY + 2X^TX\beta) = \frac{1}{n}(-2X^TY + 2X^TX\beta) \tag{3} $$
+
+    Solving for $\beta$: $\\$
+
+    $$ -2X^TY + 2X^TX\beta = 0 $$
+    $$ 2X^TX\beta = 2X^TY $$
+    $$ X^TX\beta = X^TY $$
+    $$ \beta = (X^TX)^{-1}X^TY \tag{4}$$
+
+
+    To verify this is a minimum, we need to show that the Hessian matrix is positive definite: $\\$
+
+    The Hessian matrix is the gradient of the gradient: $\\$
+    $$ H = \nabla^2_\beta L = \nabla_\beta(\nabla_\beta L) $$
+
+    From equation (3): $\\$
+    $$ \nabla_\beta L = \frac{1}{n}(-2X^TY + 2X^TX\beta) $$
+
+    Taking gradient again: $\\$
+    $$ H = \nabla^2_\beta L = \frac{2}{n}X^TX $$
+
+    This is a minimum if $H$ is positive definite. $H$ is positive definite if: $\\$
+    1. $X^TX$ is symmetric (which it is by construction) $\\$
+    2. For any non-zero vector $v$, $v^T(X^TX)v > 0$ $\\$
+
+    When $X$ has full column rank: $\\$
+    $$ v^T(X^TX)v = (Xv)^T(Xv) = \|Xv\|^2 > 0 \quad \text{for all } v \neq 0 $$
+
+    Therefore, $\hat{\beta} = (X^TX)^{-1}X^TY$ is indeed a global minimum when $X$ has full column rank. $\\$
+
+  </div>
+
+</section>  </main>
+<!--==================== FOOTER ====================-->
+<footer class="footer">
+    <div class="line-1 ">
+        <small>Designed &amp; Built by Rahul Das   </small>
+        <span class="pr-area">
+            <a href=https://github.com/RahulDas-dev/profile target="_blank">
+                <svg class=" stroke-neutral-600 dark:stroke-neutral-100 " viewBox="0 0 24 24" width="14" height="14" stroke-width="0.25" >
+                    <path d="M6 5C6 4.44772 6.44772 4 7 4C7.55228 4 8 4.44772 8 5C8 5.55228 7.55228 6 7 6C6.44772 6 6 5.55228 6 5ZM8 7.82929C9.16519 7.41746 10 6.30622 10 5C10 3.34315 8.65685 2 7 2C5.34315 2 4 3.34315 4 5C4 6.30622 4.83481 7.41746 6 7.82929V16.1707C4.83481 16.5825 4 17.6938 4 19C4 20.6569 5.34315 22 7 22C8.65685 22 10 20.6569 10 19C10 17.7334 9.21506 16.6501 8.10508 16.2101C8.45179 14.9365 9.61653 14 11 14H13C16.3137 14 19 11.3137 19 8V7.82929C20.1652 7.41746 21 6.30622 21 5C21 3.34315 19.6569 2 18 2C16.3431 2 15 3.34315 15 5C15 6.30622 15.8348 7.41746 17 7.82929V8C17 10.2091 15.2091 12 13 12H11C9.87439 12 8.83566 12.3719 8 12.9996V7.82929ZM18 6C18.5523 6 19 5.55228 19 5C19 4.44772 18.5523 4 18 4C17.4477 4 17 4.44772 17 5C17 5.55228 17.4477 6 18 6ZM6 19C6 18.4477 6.44772 18 7 18C7.55228 18 8 18.4477 8 19C8 19.5523 7.55228 20 7 20C6.44772 20 6 19.5523 6 19Z" fill="#4b5563"/>
+                </svg>
+            </a>
+        </span>
+    </div>
+    <div>
+        <small>A framework-free, responsive design bundled with vite.</small>
+    </div>
+</footer></body>
+</html>
