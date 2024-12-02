@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <title>Rahul Das - Data Scientist | Machine Learning, Data Science, Deep Learning</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="Description" CONTENT="">
+    <meta name="robots" content="index, follow"/>
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height,
+                                  initial-scale=1.0, user-scalable=no,
+                                  minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="title" content=Rahul Das - Data Scientist | Machine Learning, Data Science, Deep Learning/>
+    <meta name="keywords" content=Rahul Das, Data Scientist, Machine Learning, Data Science, Deep Learning, AI, Artificial Intelligence, Predictive Analytics, Statistical Modeling, Data Analysis, Python, Neural Networks, Natural Language Processing, Computer Vision, Data-driven Decision Making, 11 years experience, Portfolio, Data Mining, Feature Engineering, Model Deployment, Industry Expertise, Data Visualization, Problem Solving>
+    <link rel="shotcut icon" type="image/png" href="./favicon.ico" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content=Experienced Data Scientist with +12 years in the industry, specializing in Machine Learning, Data Science, and Deep Learning. Proven track record of delivering impactful solutions and driving business insights through advanced analytics. Explore my portfolio to see how I&#x27;ve applied my expertise to solve complex problems and contribute to the success of various projects and organizations./>
+    <meta property="og:image" content="https://rahuldas-dev.github.io/profile/logo256.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="256" />
+    <meta property="og:image:height" content="256" />
+    <meta name="theme-color" content="#576ce0"/>
+  <script type="module" crossorigin src="/blogs/assets/sgd-DIY9p5_6.js"></script>
+  <link rel="modulepreload" crossorigin href="/blogs/assets/auto-render-DFiRW_5p.js">
+  <link rel="stylesheet" crossorigin href="/blogs/assets/auto-render-Bpznw4TJ.css">
+  <link rel="stylesheet" crossorigin href="/blogs/assets/ols-B11Q7GdA.css">
+</head>
+<body>
+<!--==================== Header ====================-->  
+  <header id='header-top'>    
+    <nav >
+        <span class="nav__logo">Rahul 
+            <!--  <img src="assets/logo.png" alt="logo image" > -->
+        </span>
+        <button class="nav__btn" id="nav-btn">
+            <span>
+                <svg viewBox="0 -960 960 960" width="24" height="24" class="fill-neutral-800 dark:fill-neutral-200" id="nav-btn-menu-icon">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                </svg>
+                <svg viewBox="0 0 24 24" width="24" height="24" class="fill-neutral-800 dark:fill-neutral-200 hidden" id="nav-btn-cross-icon">
+                    <path d="M18,6h0a1,1,0,0,0-1.414,0L12,10.586,7.414,6A1,1,0,0,0,6,6H6A1,1,0,0,0,6,7.414L10.586,12,6,16.586A1,1,0,0,0,6,18H6a1,1,0,0,0,1.414,0L12,13.414,16.586,18A1,1,0,0,0,18,18h0a1,1,0,0,0,0-1.414L13.414,12,18,7.414A1,1,0,0,0,18,6Z"/>
+                </svg>
+            </span>
+            
+        </button>
+        <ul class="nav__menu hide-menu" id ="nav-menu">
+            <li class="nav__item">
+                <button class="nav__link" id="theme_btn">
+                    <i class="icon-sun svg-icon" id="theme_icon"></i>
+                    <span class="md:hidden">Toggle Display Mode</span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+</header>  <main class="main" id="blog_contain">
+    <section class="container ">
+  <h1 class="section__title">The math behind K-Means clustering</h1>
+
+  <h1 class="section__subtitle">The general problem statement for clustering</h1>
+  <div>
+    Given: 
+      1. A dataset $\mathcal{D} = \{x_1, x_2, \dots, x_n\} $, where $ x_i \in \mathbb{R}^d $ represents a data point in $m$ -dimensional space, the objective of clustering is to partition the dataset into $k $ disjoint subsets clusters $ \mathcal{C}_1, \mathcal{C}_2, \dots, \mathcal{C}_k $, such that:
+  </div>
+</section>  </main>
+<!--==================== FOOTER ====================-->
+<footer class="footer">
+    <div class="line-1 ">
+        <small>Designed &amp; Built by Rahul Das   </small>
+        <span class="pr-area">
+            <a href=https://github.com/RahulDas-dev/profile target="_blank">
+                <svg class=" stroke-neutral-600 dark:stroke-neutral-100 " viewBox="0 0 24 24" width="14" height="14" stroke-width="0.25" >
+                    <path d="M6 5C6 4.44772 6.44772 4 7 4C7.55228 4 8 4.44772 8 5C8 5.55228 7.55228 6 7 6C6.44772 6 6 5.55228 6 5ZM8 7.82929C9.16519 7.41746 10 6.30622 10 5C10 3.34315 8.65685 2 7 2C5.34315 2 4 3.34315 4 5C4 6.30622 4.83481 7.41746 6 7.82929V16.1707C4.83481 16.5825 4 17.6938 4 19C4 20.6569 5.34315 22 7 22C8.65685 22 10 20.6569 10 19C10 17.7334 9.21506 16.6501 8.10508 16.2101C8.45179 14.9365 9.61653 14 11 14H13C16.3137 14 19 11.3137 19 8V7.82929C20.1652 7.41746 21 6.30622 21 5C21 3.34315 19.6569 2 18 2C16.3431 2 15 3.34315 15 5C15 6.30622 15.8348 7.41746 17 7.82929V8C17 10.2091 15.2091 12 13 12H11C9.87439 12 8.83566 12.3719 8 12.9996V7.82929ZM18 6C18.5523 6 19 5.55228 19 5C19 4.44772 18.5523 4 18 4C17.4477 4 17 4.44772 17 5C17 5.55228 17.4477 6 18 6ZM6 19C6 18.4477 6.44772 18 7 18C7.55228 18 8 18.4477 8 19C8 19.5523 7.55228 20 7 20C6.44772 20 6 19.5523 6 19Z" fill="#4b5563"/>
+                </svg>
+            </a>
+        </span>
+    </div>
+    <div>
+        <small>A framework-free, responsive design bundled with vite.</small>
+    </div>
+</footer></body>
+</html>
