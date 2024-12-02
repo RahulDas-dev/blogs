@@ -1,0 +1,43 @@
+body>header{
+  @apply fixed w-full top-0 left-0 shadow-sm shadow-indigo-500/40 dark:shadow-gray-400/50 z-50  transition-all ease-in-out delay-75 bg-inherit;
+}
+
+body>header>nav{
+  @apply container flex justify-between items-center h-12 relative ;
+}
+
+body>header>nav .nav__logo{
+  @apply font-semibold text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 text-lg hover:text-prime transition ease-in-out delay-300 cursor-pointer tracking-wide;
+}
+
+body>header>nav .nav__btn{
+  @apply vsm:visible md:invisible;
+}
+
+body>header>nav .hide-menu{
+  @apply vsm:invisible md:visible;
+}   
+
+body>header>nav ul{
+  @apply vsm:absolute vsm:top-12 vsm:-right-8 md:relative flex transition ease-in-out delay-300 vsm:bg-slate-200;
+  @apply md:flex-row vsm:flex-col vsm:w-9/12 md:justify-end md:top-0 md:bg-inherit; 
+}
+
+body>header>nav ul>.nav__item{
+  @apply m-0 md:py-0 vsm:py-4 vsm:pl-4 md:pl-12 md:hover:bg-transparent vsm:hover:bg-gray-300;
+}
+
+body>header>nav ul>.nav__item>.nav__link{
+  @apply md:relative md:tracking-wide md:block md:truncate text-gray-600 dark:text-gray-400; 
+  @apply vsm:tracking-wide vsm:flex vsm:flex-row vsm:items-center vsm:justify-start vsm:gap-6;
+}
+
+/* body>header>nav ul>.nav__item>.nav__link::after{
+  @apply absolute top-0 left-0 w-full content-gap h-4 bg-blue-800;
+  @apply vsm:content-none;
+} */
+
+body>header>nav ul>.nav__item>.nav__link>.nav__icon{
+  @apply md:hidden;
+  color: #3e3d3d;
+}

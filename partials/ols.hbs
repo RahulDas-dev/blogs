@@ -1,0 +1,184 @@
+<section class="container ">
+  <h1 class="section__title">The math behind OLS [ Ordinary Least Squares ] regression</h1>
+
+  <h1 class="section__subtitle">The general problem statement for machine learning</h1>
+  <div>
+    Assume we observe a dataset of examples $ {D= \{(x_k, y_k)\}_{k=1..n} }$ where ${x_k = (x_k^1, x_k^2, ..., x_k^m)}$
+    is a vector of $m$ features ${x_k \in \mathbb{R}^m}$ and ${y_k \in \mathbb{R}}$ is a target. The examples
+    ${x_k, y_k}$ are independent and identically distributed according to some unknown distribution ${P(·, ·)}$. The
+    goal of a learning task is to learn a function ${F : \mathbb{R}^m \to \mathbb{R}}$ which minimizes the expected loss
+    ${\mathcal{L}(F) := \mathbb{E}L(y, F(x))}$. Here $L(·, ·)$ is a smooth loss function and $(x,y)$ is a test example
+    sampled from $P$ independently of the training set $D$.
+
+    $$ {D= \{(x_k, y_k)\}_{k=1..n} \qquad x_k \in \mathbb{R}^m \qquad y_k \in \mathbb{R}} $$
+
+    $n \rightarrow $ Training dataset size $\\$
+    $m \rightarrow $ Number of features $\\$
+    $F \rightarrow $ The learning task is to find a function $F$ that minimizes the expected loss $\mathcal{L}(F)$ $\\$
+    $F(x) \rightarrow \hat{y} \rightarrow$ estimation for the sample $x$ $\\$
+    $L \rightarrow L(y, F(x)) \rightarrow L(y, \hat{y})$ The Loss Function $\\$
+  </div>
+
+  <h1 class="section__subtitle">The OLS regression</h1>
+  <div>
+    The $F$ is Linear function for OLS $\quad F(x_k) = \beta_0 + \beta_1x_k^1 + \beta_2x_k^2 + ... + \beta_mx_k^m$ . The betas are Learnable Parameter $\\$
+    <br/>
+
+    Now lets redefine $F$ interms of Matrix notations$\\$
+
+    $$F(x_k) = \beta_0 + \beta_1x_k^1 + \beta_2x_k^2 + ... + \beta_mx_k^m = \begin{bmatrix} 1 & x_k^1 & x_k^2 & \cdots & x_k^m \end{bmatrix}
+    \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \\ \vdots \\ \beta_m \end{bmatrix} = \mathcal{X}_k\beta = \hat{y}_k \tag{1}$$
+
+    Lets define the nomanclueture for $\mathcal{X}_k$ $\beta$ and $\hat{y}_k$ $\\$
+    <br/>
+
+    $\quad 1.$ $\mathcal{X}_k$ is derived feature vector from the input $x_k$, $x_k$ has $m$ dimension, so $\mathcal{X}_k$ has $m+1$ dimension.  
+    $$\mathcal{X}_k = \begin{bmatrix} 1 & x_k^1 & x_k^2 & \cdots & x_k^m \end{bmatrix}_{1 \times (m+1)}
+    = \begin{bmatrix} 1 & x_k \end{bmatrix}_{1 \times (m+1)} \quad \mathcal{X}_k \in \mathbb{R}^{1 \times (m+1)}$$ 
+    
+    $\quad 2.$ The $\beta$ is the Leranable model Parameter has $m+1$ dimension
+    $$\beta = \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \\ \vdots \\ \beta_m \end{bmatrix}_{(m+1) \times 1} 
+    = \begin{bmatrix} 1 & \beta_0 & \beta_1 & \beta_2 & \cdots & \beta_m \end{bmatrix}_{1 \times (m+1)}^{T}
+    \quad\beta \in \mathbb{R}^{(m+1) \times 1}$$
+
+    $\quad 3.\quad \hat{y}_k$  The predicted value of $y_k$, $\hat{y}_k$ is scalar so $\hat{y}_k \in \mathbb{R} \\$
+    <!-- Previous content remains -->
+
+    <br/>
+    We can rewrite the euqtion one For the entire dataset of n observations: $\\$
+
+    $$\hat{y}_1 = \beta_0 + \beta_1x_1^1 + \beta_2x_1^2 + ... + \beta_mx_1^m $$
+    $$\hat{y}_2 = \beta_0 + \beta_1x_2^1 + \beta_2x_2^2 + ... + \beta_mx_2^m $$
+    $$\hat{y}_3 = \beta_0 + \beta_1x_3^1 + \beta_2x_3^2 + ... + \beta_mx_3^m $$
+    $$\vdots$$
+    $$\hat{y}_n = \beta_0 + \beta_1x_n^1 + \beta_2x_n^2 + ... + \beta_mx_n^m $$
+
+    <br/>
+    We can rewrite above n linear equations in terms of Matrix noations  
+    $$
+    \begin{bmatrix} \hat{y}_1 \\ \hat{y}_2 \\ \vdots \\ \hat{y}_n \end{bmatrix} =
+    \begin{bmatrix}
+    1 & x_1^1 & x_1^2 & \cdots & x_1^m \\
+    1 & x_2^1 & x_2^2 & \cdots & x_2^m \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    1 & x_n^1 & x_n^2 & \cdots & x_n^m
+    \end{bmatrix}
+    \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \\ \vdots \\ \beta_m \end{bmatrix}
+    $$
+
+    Time for some more nomanclueture$\\$
+    <br/>
+
+    $\quad 1.$ The row vector $\hat{Y}$ is called prediction vector  the $\hat{Y}$ has $n$ dimension.  
+    $$\hat{Y} = \begin{bmatrix} \hat{y}_1 \\ \hat{y}_2 \\ \hat{y}_3 \\ \vdots \\ \hat{y}_n \end{bmatrix}_{n \times 1}  \quad\hat{Y} \in \mathbb{R}^{n \times 1}$$
+
+    $\quad 2.$ The matrix $X$ is called design Matrix  the $X$ has $n \times (m+1)$ dimension. 
+    $$X = \begin{bmatrix}
+    1 & x_1^1 & x_1^2 & \cdots & x_1^m \\
+    1 & x_2^1 & x_2^2 & \cdots & x_2^m \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    1 & x_n^1 & x_n^2 & \cdots & x_n^m
+    \end{bmatrix}_{n \times m+1} X \in \mathbb{R}^{n \times (m+1)} $$
+
+    $\quad 3.$ The $\beta$ is the Leranable model Parameter has $m+1$ dimension 
+    $$\beta = \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \\ \vdots \\ \beta_m \end{bmatrix}_{(m+1) \times 1} \quad \beta \in \mathbb{R}^{(m+1) \times 1}$$
+    <!-- Previous content remains -->
+    <br/>
+    Finally The Closed form Equation Linear Regression is , given as  $\quad \hat{Y} = X\beta$
+
+    $$ \hat{Y} = X\beta \tag{2}$$
+    </div>
+
+    <h1 class="section__subtitle">The Loss Function of OLS regression</h1>
+    <div>
+    The loss function is the squared error i.e $\quad (y_k - \hat{y}_k)^2$ , if we take the expected value of loss over the entire training dataset then 
+
+    $$ L = \frac{1}{n}\sum_{k=1}^n (y_k - \hat{y}_k)^2 \quad \text{The term} \quad y_k - \hat{y}_k = e_{k} \quad
+    \text{is known as the residual}$$
+
+    $$ L = \frac{1}{n}\sum_{k=1}^n (e_k)^2 = \frac{1}{n} [(e_1)^2 +(e_2)^2
+    + (e_n)^2 + ... + (e_n)^2 ] = \frac{1}{n}\begin{bmatrix} e_1 & e_2 & \cdots & e_n \end{bmatrix}
+    \begin{bmatrix} e_1 \\ e_2 \\ \vdots \\ e_n \end{bmatrix} = \frac{1}{n}e^Te$$
+
+    $$ L = \frac{1}{n}e^Te = \frac{1}{n}(Y - \hat{Y})^T(Y - \hat{Y}) = \frac{1}{n}(Y^T - \hat{Y}^T)(Y - \hat{Y}) =
+    \frac{1}{n}(Y^TY - Y^T\hat{Y} - \hat{Y}^TY + \hat{Y}^T\hat{Y})$$
+
+    Substituting $\quad \hat{Y} = X\beta \quad$ from equation [2] $\\$
+    $$ L = \frac{1}{n}(Y^TY - Y^TX\beta - (X\beta)^TY + (X\beta)^T(X\beta)) $$
+
+    Note that $(X\beta)^T = \beta^TX^T$: $\\$
+    $$ L = \frac{1}{n}(Y^TY - Y^TX\beta - \beta^TX^TY + \beta^TX^TX\beta) $$
+
+    Since $Y^TX\beta$ is a scalar, $Y^TX\beta = (Y^TX\beta)^T = \beta^TX^TY$: $\\$
+    $$ L = \frac{1}{n}(Y^TY - 2Y^TX\beta + \beta^TX^TX\beta)$$
+
+    The Loss function $L$ can be expressed as a function of $Y$, $X$ and $\beta$: $\\$
+
+    $$ L(Y, X, \beta) = \frac{1}{n}(Y^TY - 2Y^TX\beta + \beta^TX^TX\beta) \tag{3}$$
+
+    where: $\\$
+    $Y \in \mathbb{R}^{n \times 1}$ is the vector of observed values $\\$
+    $X \in \mathbb{R}^{n \times (m+1)}$ is the design matrix $\\$
+    $\beta \in \mathbb{R}^{(m+1) \times 1}$ is the parameter vector $\\$
+
+    To find the minimum of $L$, we take $\frac{\partial L}{\partial \beta}$ and set it to zero: $\\$
+
+    $$ \frac{\partial L}{\partial \beta} = \frac{1}{n}(-2X^TY + 2X^TX\beta) = 0 \tag{4}$$
+
+    Solving for $\beta$: $\\$
+
+    $$ -2X^TY + 2X^TX\beta = 0 $$
+    $$ 2X^TX\beta = 2X^TY $$
+    $$ X^TX\beta = X^TY $$
+    $$ \beta = (X^TX)^{-1}X^TY \tag{5}$$
+
+    Wait Since $L: \mathbb{R}^{(m+1)} \to \mathbb{R}$ maps a vector to a scalar, we can use not use simply partial
+    differentiation ,we will use the gradient operator: $\\$
+
+    Starting from equation (2): $\\$
+
+    $$ L(Y, X, \beta) = \frac{1}{n}(Y^TY - 2Y^TX\beta + \beta^TX^TX\beta) $$
+
+    Taking the gradient with respect to $\beta$: $\\$
+
+    $$ \nabla_\beta L = \frac{1}{n}\nabla_\beta(Y^TY - 2Y^TX\beta + \beta^TX^TX\beta) $$
+
+    Using matrix calculus rules: $\\$
+    $$ \nabla_\beta(Y^TY) = 0 \quad \text{(constant term)} $$
+    $$ \nabla_\beta(-2Y^TX\beta) = -2X^TY $$
+    $$ \nabla_\beta(\beta^TX^TX\beta) = 2X^TX\beta $$
+
+    Therefore: $\\$
+    $$ \nabla_\beta L = \frac{1}{n}(0 - 2X^TY + 2X^TX\beta) = \frac{1}{n}(-2X^TY + 2X^TX\beta) \tag{6} $$
+
+    Solving for $\beta$: $\\$
+
+    $$ -2X^TY + 2X^TX\beta = 0 $$
+    $$ 2X^TX\beta = 2X^TY $$
+    $$ X^TX\beta = X^TY $$
+    $$ \beta = (X^TX)^{-1}X^TY \tag{7}$$
+
+
+    To verify this is a minimum, we need to show that the Hessian matrix is positive definite: $\\$
+
+    The Hessian matrix is the gradient of the gradient: $\\$
+    $$ H = \nabla^2_\beta L = \nabla_\beta(\nabla_\beta L) $$
+
+    From equation (3): $\\$
+    $$ \nabla_\beta L = \frac{1}{n}(-2X^TY + 2X^TX\beta) $$
+
+    Taking gradient again: $\\$
+    $$ H = \nabla^2_\beta L = \frac{2}{n}X^TX $$
+
+    This is a minimum if $H$ is positive definite. $H$ is positive definite if: $\\$
+    1. $X^TX$ is symmetric (which it is by construction) $\\$
+    2. For any non-zero vector $v$, $v^T(X^TX)v > 0$ $\\$
+
+    When $X$ has full column rank: $\\$
+    $$ v^T(X^TX)v = (Xv)^T(Xv) = \|Xv\|^2 > 0 \quad \text{for all } v \neq 0 $$
+
+    Therefore, $\hat{\beta} = (X^TX)^{-1}X^TY$ is indeed a global minimum when $X$ has full column rank. $\\$
+
+  </div>
+
+</section>

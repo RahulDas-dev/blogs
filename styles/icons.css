@@ -1,0 +1,53 @@
+.icon-projects{
+  background: url('./assets/projects.svg');
+}
+
+.icon-education{
+  background: url('./assets/education.svg');
+}
+
+.icon-contacts{
+  background: url('./assets/contacts.svg');
+}
+
+.icon-experience{
+  background: url('./assets/experience.svg');
+}
+
+.icon-linkedin{
+  background: url('./assets/linkedin.svg')
+}
+
+.icon-github{
+  background: url('./assets/github.svg')
+}
+
+.icon-twitter{
+  background: url('./assets/twitter.svg')
+}
+
+.icon-sun{
+  background: url('./assets/brightness.svg')
+}
+
+.icon-moon{
+  background: url('./assets/moon.svg')
+}
+
+.svg-icon {
+  @apply font-normal not-italic text-base inline-block leading-4 normal-case tracking-normal whitespace-normal bg-no-repeat bg-cover antialiased;
+  opacity: 0.7;
+  height: 20px;
+  width: 20px;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+}
+
+.social-icon {
+  @apply font-normal not-italic text-base inline-block leading-4 normal-case tracking-normal whitespace-normal bg-no-repeat bg-cover antialiased;
+  @apply opacity-65 hover:opacity-100 transition-opacity ease-in-out delay-75;
+  height: 28px;
+  width: 28px;
+  /* Support for Safari and Chrome. */
+  /* text-rendering: optimizeLegibility; */
+}

@@ -1,0 +1,28 @@
+{   
+    "pagetitle":"Rahul Das - Data Scientist | Machine Learning, Data Science, Deep Learning",
+    "metatag":{
+      "keywords": "Rahul Das, Data Scientist, Machine Learning, Data Science, Deep Learning, AI, Artificial Intelligence, Predictive Analytics, Statistical Modeling, Data Analysis, Python, Neural Networks, Natural Language Processing, Computer Vision, Data-driven Decision Making, 11 years experience, Portfolio, Data Mining, Feature Engineering, Model Deployment, Industry Expertise, Data Visualization, Problem Solving",
+      "og_description": "Experienced Data Scientist with +12 years in the industry, specializing in Machine Learning, Data Science, and Deep Learning. Proven track record of delivering impactful solutions and driving business insights through advanced analytics. Explore my portfolio to see how I've applied my expertise to solve complex problems and contribute to the success of various projects and organizations.",
+      "title": "Rahul Das - Data Scientist | Machine Learning, Data Science, Deep Learning"
+    },
+    "personal": {
+        "name" : "Rahul Das",
+        "dob" : "**-**-****",
+        "github":"https://github.com/RahulDas-dev",
+        "twitter":"https://twitter.com/Rahul13031988",
+        "linkedin":"https://www.linkedin.com/in/rahul-das-15416570",
+        "mobile": "**********",
+        "mail":"r.das699@gmail.com"
+    },
+    "title": "Hi, I am Rahul",
+    "sub_title" : "Data Science, ML Engineer",
+    "content": "Welcome to my professional space! With +12 years of expertise in software development, I have honed my skills in crafting innovative solutions and pushing the boundaries of what technology can achieve. Over the past 6+ years, I have immersed myself in the dynamic field of Machine Learning [ML] and Artificial Intelligence [AI], contributing to the evolution of these cutting-edge technologies.",
+    "footer":{
+      "repolink" : "https://github.com/RahulDas-dev/profile",
+      "line1": "Designed & Built by Rahul Das  ",
+      "line2": "A framework-free, responsive design bundled with vite."
+    }
+}
+
+
+

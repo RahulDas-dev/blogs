@@ -1,0 +1,14 @@
+footer.footer{
+  @apply text-center font-mono pt-20 pb-2 font-thin  w-full;
+}
+footer.footer small{
+  @apply pr-1 text-xs tracking-tight;
+}
+
+footer.footer>.line-1{
+  @apply inline-flex justify-center items-center;
+}
+
+footer.footer>.line-1>.pr-area{
+  @apply vsm:pl-1 md:pl-2 opacity-70 hover:opacity-100;
+}
