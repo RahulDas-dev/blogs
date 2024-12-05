@@ -1,0 +1,70 @@
+<div>
+    The Liner Regression is a form of Parametric methods. Parametric methods makes assumptions about the functional form, or shape, of $F$. 
+    For example, Liner Regression makes one very simple assumption is that, $F$ is linear in x. 
+    $$\quad F(x_i) = \beta_0 + \beta_1x_i^1 + \beta_2x_i^2 + ... + \beta_mx_i^m .\quad \text{The betas are Learnable Parameter} $$
+    <br/>
+
+    Now lets redefine $F$ interms of Matrix notations
+
+    $$F(x_i) = \beta_0 + \beta_1x_i^1 + \beta_2x_i^2 + ... + \beta_mx_i^m = \begin{bmatrix} 1 & x_i^1 & x_i^2 & \cdots & x_i^m \end{bmatrix}
+    \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \\ \vdots \\ \beta_m \end{bmatrix} = \mathcal{X}_i\beta = \hat{y}_i \tag{1}$$
+
+    Lets define the nomanclueture for $\mathcal{X}_i$ $\beta$ and $\hat{y}_i$
+    <br/>
+
+    $\quad 1.$ $\mathcal{X}_i$ is derived feature vector from the input $x_i$, $x_i$ has $m$ dimension, so $\mathcal{X}_i$ has $m+1$ dimension.  
+    $$\mathcal{X}_i = \begin{bmatrix} 1 & x_i^1 & x_i^2 & \cdots & x_i^m \end{bmatrix}_{1 \times (m+1)}
+    = \begin{bmatrix} 1 & x_i \end{bmatrix}_{1 \times (m+1)} \quad \mathcal{X}_i \in \mathbb{R}^{1 \times (m+1)}$$ 
+    
+    $\quad 2.$ The $\beta$ is the Leranable model Parameter has $m+1$ dimension
+    $$\beta = \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \\ \vdots \\ \beta_m \end{bmatrix}_{(m+1) \times 1} 
+    = \begin{bmatrix} 1 & \beta_0 & \beta_1 & \beta_2 & \cdots & \beta_m \end{bmatrix}_{1 \times (m+1)}^{T}
+    \quad\beta \in \mathbb{R}^{(m+1) \times 1}$$
+
+    $\quad 3.\quad \hat{y}_i$  The predicted value of $y_i$, $\hat{y}_i$ is scalar so $\hat{y}_i \in \mathbb{R} \\$
+    <!-- Previous content remains -->
+
+    <br/>
+    We can rewrite the euqtion one For the entire dataset of n observations: $\\$
+
+    $$\hat{y}_1 = \beta_0 + \beta_1x_1^1 + \beta_2x_1^2 + ... + \beta_mx_1^m $$
+    $$\hat{y}_2 = \beta_0 + \beta_1x_2^1 + \beta_2x_2^2 + ... + \beta_mx_2^m $$
+    $$\hat{y}_3 = \beta_0 + \beta_1x_3^1 + \beta_2x_3^2 + ... + \beta_mx_3^m $$
+    $$\vdots$$
+    $$\hat{y}_n = \beta_0 + \beta_1x_n^1 + \beta_2x_n^2 + ... + \beta_mx_n^m $$
+
+    <br/>
+    We can rewrite above n linear equations in terms of Matrix noations  
+    $$
+    \begin{bmatrix} \hat{y}_1 \\ \hat{y}_2 \\ \vdots \\ \hat{y}_n \end{bmatrix} =
+    \begin{bmatrix}
+    1 & x_1^1 & x_1^2 & \cdots & x_1^m \\
+    1 & x_2^1 & x_2^2 & \cdots & x_2^m \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    1 & x_n^1 & x_n^2 & \cdots & x_n^m
+    \end{bmatrix}
+    \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \\ \vdots \\ \beta_m \end{bmatrix}
+    $$
+
+    Time for some more nomanclueture$\\$
+    <br/>
+
+    $\quad 1.$ The row vector $\hat{Y}$ is called prediction vector  the $\hat{Y}$ has $n$ dimension.  
+    $$\hat{Y} = \begin{bmatrix} \hat{y}_1 \\ \hat{y}_2 \\ \hat{y}_3 \\ \vdots \\ \hat{y}_n \end{bmatrix}_{n \times 1}  \quad\hat{Y} \in \mathbb{R}^{n \times 1}$$
+
+    $\quad 2.$ The matrix $X$ is called design Matrix  the $X$ has $n \times (m+1)$ dimension. 
+    $$X = \begin{bmatrix}
+    1 & x_1^1 & x_1^2 & \cdots & x_1^m \\
+    1 & x_2^1 & x_2^2 & \cdots & x_2^m \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    1 & x_n^1 & x_n^2 & \cdots & x_n^m
+    \end{bmatrix}_{n \times m+1} X \in \mathbb{R}^{n \times (m+1)} $$
+
+    $\quad 3.$ The $\beta$ is the Leranable model Parameter has $m+1$ dimension 
+    $$\beta = \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \\ \vdots \\ \beta_m \end{bmatrix}_{(m+1) \times 1} \quad \beta \in \mathbb{R}^{(m+1) \times 1}$$
+    <!-- Previous content remains -->
+    <br/>
+    Finally The Closed form Equation Linear Regression is , given as  $\quad \hat{Y} = X\beta$
+
+    $$ \hat{Y} = X\beta \tag{2}$$
+</div>

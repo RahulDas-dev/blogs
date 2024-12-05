@@ -1,0 +1,33 @@
+<div>
+    <div class="item__title">Given:</div>
+    1. A dataset $ {D= \{(x_1, y_1), (x_2, y_2), \cdots,(x_n, y_n)\}}$ of size $n$ where : $\\$
+        $\quad \centerdot$ ${x_i = (x_i^1, x_i^2, \cdots, x_i^m)}$ represents the feature vector for the $i^{th}$ sample.  ${x_i \in \mathbb{R}^m}$$\\$  
+        $\quad \centerdot$ and ${y_i}$ represents the corresponding target (output) value ${y_i \in \mathbb{R}}$ is a target.$\\$
+    2. And a Loss function $L(y_i, \hat{y}_i)$ where $L : \mathbb{R} \times \mathbb{R} \to \mathbb{R}$. $\\$
+
+    <br/>
+    <div class="item__title">Objective:</div>
+    The goal of regression is to find a function $F : \mathbb{R}^m \to \mathbb{R}$ that maps the input features $x_i$ to the target values $y_i$ 
+    such that predicted value $\hat{y}_i = F(x_i)$ is as close to the target value $y_i$ as possible. i.e minimizes the Loss function $L(y_i, \hat{y}_i)$. $\\$
+
+    <br/>
+    <div class="item__title">Mathematical Formulation:</div>
+    The problem can be expressed as minimizing a loss function or expected loss ${\mathcal{L}(D,F) := \mathbb{E}L(y, F(x))}$. The $\mathcal{L}$ quantifies the 
+    difference between the true values $y_i$ and the predicted values $\hat{y}_i$ for each example in the dataset $D$. 
+
+    $$ \text{Minimize:} \quad {\mathcal{L}(D,F) = \frac{1}{n}\mathbb{E}L(y, F(x)) = \frac{1}{n}\sum_{i=1}^n L(y_i, F(x_i))}$$
+  
+    <br/>
+    <div class="item__title">Assumptions:</div>
+    $\quad \centerdot \quad \{x_i, y_i\} \quad $ are independent and identically distributed according to some unknown distribution ${P(·, ·)}$ $\\$
+    $\quad \centerdot$  The loss function $L$ is differentiable (in most cases) to enable optimization. $\\$ 
+    <br/>
+
+    <div class="item__title">Notations:</div>
+    $\quad \centerdot \quad {D= \{(x_i, y_i)\}_{i=1..n} \qquad x_i \in \mathbb{R}^m \qquad y_i \in \mathbb{R}} \\$
+    $\quad \centerdot \quad n \rightarrow $ Training dataset size $\\$
+    $\quad \centerdot \quad m \rightarrow $ Number of features $\\$
+    $\quad \centerdot \quad F \rightarrow $ The learning task is to find a function $F$ that minimizes the expected loss $\mathcal{L}(F)$ $\\$
+    $\quad \centerdot \quad F(x) \rightarrow \hat{y} \rightarrow$ estimation for the sample $x$ $\\$
+    $\quad \centerdot \quad L \rightarrow L(y, F(x)) \rightarrow L(y, \hat{y})$ The Loss Function $\\$
+</div>

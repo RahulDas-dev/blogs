@@ -1,0 +1,19 @@
+<div>
+    The loss function is the squared error i.e $\quad (y_i - \hat{y}_i)^2$ , which quantifies the 
+    difference between the true values $y_i$ and the predicted values $\hat{y}_i$ for $k^{th}$ example in the dataset $D$.
+    
+    $$ L(y_i, \hat{y}_i) = (y_i - \hat{y}_i)^2$$
+    if we take the expected value of loss over the entire training dataset loss function or expected loss becomes Cost function ${\mathcal{L}(D,F) := \mathbb{E}L(y, F(x))}$. The $\mathcal{L}$ quantifies the 
+    difference between the true values $y_i$ and the predicted values $\hat{y}_i$ for each example in the dataset $D$.  
+
+    $$ {\mathcal{L}(D,F) = \frac{1}{n}\mathbb{E}L(y, F(x)) = \frac{1}{n}\sum_{i=1}^n L(y_i, F(x_k)) = \frac{1}{n}\sum_{i=1}^n (y_i - \hat{y}_i)^2 }$$
+
+    The term $y_i - \hat{y}_i = e_{k}$ is known as the residual$\\$
+
+    $$ \mathcal{L} = \frac{1}{n}\sum_{i=1}^n (e_k)^2 = \frac{1}{n} [(e_1)^2 +(e_2)^2
+    + (e_n)^2 + ... + (e_n)^2 ] = \frac{1}{n}\begin{bmatrix} e_1 & e_2 & \cdots & e_n \end{bmatrix}
+    \begin{bmatrix} e_1 \\ e_2 \\ \vdots \\ e_n \end{bmatrix} = \frac{1}{n}e^Te$$
+
+    $$ \mathcal{L} = \frac{1}{n}e^Te = \frac{1}{n}(Y - \hat{Y})^T(Y - \hat{Y}) = \frac{1}{n}(Y^T - \hat{Y}^T)(Y - \hat{Y}) =
+    \frac{1}{n}(Y^TY - Y^T\hat{Y} - \hat{Y}^TY + \hat{Y}^T\hat{Y})$$
+</div>
