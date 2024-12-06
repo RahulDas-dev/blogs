@@ -15,21 +15,21 @@ body>header>nav .nav__btn{
 }
 
 body>header>nav .hide-menu{
-  @apply vsm:invisible md:visible;
+  @apply visible;
 }   
 
 body>header>nav ul{
-  @apply vsm:absolute vsm:top-12 vsm:-right-8 md:relative flex transition ease-in-out delay-300 vsm:bg-slate-200;
-  @apply md:flex-row vsm:flex-col vsm:w-9/12 md:justify-end md:top-0 md:bg-inherit; 
+  @apply flex transition ease-in-out delay-300 vsm:bg-slate-200;
+  @apply flex-row justify-end top-0 bg-inherit; 
 }
 
 body>header>nav ul>.nav__item{
-  @apply m-0 md:py-0 vsm:py-4 vsm:pl-4 md:pl-12 md:hover:bg-transparent vsm:hover:bg-gray-300;
+  @apply m-0 py-0 pl-12 ;
 }
 
 body>header>nav ul>.nav__item>.nav__link{
-  @apply md:relative md:tracking-wide md:block md:truncate text-gray-600 dark:text-gray-400; 
-  @apply vsm:tracking-wide vsm:flex vsm:flex-row vsm:items-center vsm:justify-start vsm:gap-6;
+  @apply relative tracking-wide block truncate text-gray-600 dark:text-gray-400; 
+  @apply tracking-wide flex flex-row items-center justify-start gap-6;
 }
 
 /* body>header>nav ul>.nav__item>.nav__link::after{
@@ -37,7 +37,7 @@ body>header>nav ul>.nav__item>.nav__link{
   @apply vsm:content-none;
 } */
 
-body>header>nav ul>.nav__item>.nav__link>.nav__icon{
+/* body>header>nav ul>.nav__item>.nav__link>.nav__icon{
   @apply md:hidden;
   color: #3e3d3d;
-}
+} */
