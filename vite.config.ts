@@ -25,7 +25,7 @@ export default defineConfig({
         target: ["es2015", "chrome100", "safari13"],
         outDir: './build',
         minify: true,
-        sourcemap: true,
+        sourcemap: false,
         rollupOptions: {
             input: {
               ols: resolve(__dirname,'ols','index.html'),
